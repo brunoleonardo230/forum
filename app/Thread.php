@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Thread extends Model
 {
-    protected $fillable = ['title', 'body', 'slug'];
+    protected $fillable = ['title', 'body', 'slug', 'channel_id'];
 
     public function user()
     {
@@ -18,8 +18,8 @@ class Thread extends Model
         return $this->hasMany(Reply::class)->orderBy('created_at', 'DESC');
     }
 
-//    public function channel()
-//    {
-//        return $this->belongsTo(Channel::class);
-//    }
+    public function channel()
+    {
+        return $this->belongsTo(Channel::class);
+    }
 }

@@ -14,5 +14,43 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('threads.index');
 });
+
+Route::group(['middleware' => 'access.control.list'], function() {
+
+    Route::resource('threads', 'ThreadController');
+});
+
+Route::post('/replies/store', 'ReplyController@store')->name('replies.store');
+
+Auth::routes();
+
+
+Route::group(['middleware' => ['auth', 'access.control.list'], 'namespace' => 'Manager', 'prefix' => 'manager'], function(){
+    Route::get('/', function(){
+        return redirect()->route('users.index');
+    });
+
+    Route::resource('roles', 'RoleController');
+    Route::get('roles/{role}/resources', 'RoleController@syncResources')->name('roles.resources');
+    Route::put('roles/{role}/resources', 'RoleController@updateSyncResources')->name('roles.resources.update');
+
+    Route::resource('users', 'UserController');
+    Route::resource('resources', 'ResourceController');
+    Route::resource('modules', 'ModuleController');
+    Route::get('modules/{module}/resources', 'ModuleController@syncResources')->name('modules.resources');
+    Route::put('modules/{module}/resources', 'ModuleController@updateSyncResources')->name('modules.resources.update');
+
+});
+
+//
+//Route::get('routes', function(){
+//	foreach(Route::getRoutes()->getRoutes() as $route) {
+//		print $route->getName() . '<hr>';
+//	}
+//});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
