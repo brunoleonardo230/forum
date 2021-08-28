@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="857c8973-75f7-4af9-ba1c-d99f6c9472e0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Manager/ModuleController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Views/MenuViewComposer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/manager/includes/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/manager.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/manager.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,6 +146,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\forum\resources\views\manager\includes" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -156,7 +166,7 @@
       <option name="presentableId" value="Default" />
       <updated>1630111838611</updated>
       <workItem from="1630111839998" duration="271000" />
-      <workItem from="1630112533463" duration="12456000" />
+      <workItem from="1630112533463" duration="19856000" />
     </task>
     <servers />
   </component>
